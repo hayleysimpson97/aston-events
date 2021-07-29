@@ -10,7 +10,7 @@
         <h1>{{$event->name}}</h1>
         <h2>{{$event->date}}</h2>
         <p>{{$event->location}}</p>
-        <img src={{$file}}>   
+        <img src=""https://ia-180203938.herokuapp.com/image/netball.jpg"">   
         <p>{{$event->description}}</p>
         <p>Organised by: {{$event->organiser_name}}</p>
         <p>Contact: {{$event->email}}, {{$event->phone_number}}</p>
