@@ -114,4 +114,9 @@ class EventController extends Controller
 
     }  
 
+    public function getPicture($name)
+    {
+        return Storage::disk('s3')->response('images/'.$name);
+        
+    }
 }
