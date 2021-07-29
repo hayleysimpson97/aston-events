@@ -36,7 +36,7 @@
                                 <input type="text" id="phone_number" name="phone_number" required><br>
                             </div>
                             <div>
-                                <button onClick="matchPassword()">Create User</button>
+                                <button>Create User</button>
                             </div>
                         </div>
                     </form>
@@ -55,7 +55,7 @@ function checkPass()
     var message=document.getElementById('confirm-message');
 
     var good_color = "#66cc66";
-    var good_color = "#ff6666";
+    var bad_color = "#ff6666";
 
     if(pw1.value == pw2.value){
         pw2.style.backgroundColor = good_color;
