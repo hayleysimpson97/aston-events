@@ -10,7 +10,7 @@
         <h1>{{$event->name}}</h1>
         <h2>{{$event->date}}</h2>
         <p>{{$event->location}}</p>
-        <img src="{{URL('/storage/'.$event->picture)}}">   
+        <img src={{$file}}>   
         <p>{{$event->description}}</p>
         <p>Organised by: {{$event->organiser_name}}</p>
         <p>Contact: {{$event->email}}, {{$event->phone_number}}</p>
