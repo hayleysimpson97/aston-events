@@ -1,0 +1,45 @@
+body {
+    font-family: 'Nunito';
+}
+
+html {
+    height: 100%;
+    }
+    
+body {
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100%;
+}
+    
+.nav {
+    list-style: none;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+    
+
+    
+.nav>li {
+    display: inline-block;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+li:hover {
+    background-color: purple;
+}
+
+.astonEvents{
+    float:left;
+}
