@@ -29,5 +29,3 @@ Route::post('/createevent', [\App\Http\Controllers\EventController::class, 'stor
 Route::get('/editevent/{event}', [\App\Http\Controllers\EventController::class, 'edit']); 
 Route::put('/editevent/{event}', [\App\Http\Controllers\EventController::class, 'update']);
 Route::get('/events/updateinterest/{event}', [\App\Http\Controllers\EventController::class, 'updateInterest']); 
-
-Route::get('image/{name}', [\App\Http\Controllers\EventController::class, 'getPicture']);

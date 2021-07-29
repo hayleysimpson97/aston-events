@@ -7,12 +7,13 @@
     <body>
     <ul class="nav">
         <li class="astonEvents" onclick="window.location='{{ url("/") }}'">Aston Events</li>
-        <li onclick="window.location='{{ url("register") }}'">Register </li>
-        <li onclick="window.location='{{ url("login") }}'">Login</li>
         @if( auth()->check() )
         <li onclick="window.location='{{ url("/createevent") }}'">Create Event</li>
             <li onclick="window.location='{{ url("/yourevents") }}'">{{ auth()->user()->name }}</li>
             <li onclick="window.location='{{ url("/logout") }}'">Logout</li>
+        @else
+            <li onclick="window.location='{{ url("register") }}'">Register </li>
+            <li onclick="window.location='{{ url("login") }}'">Login</li>
         @endif
     </ul>
 
