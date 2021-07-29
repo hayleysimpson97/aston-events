@@ -74,7 +74,7 @@ class EventController extends Controller
             'location' => $request->location,
             'date' => $request->date,
             'category_id' => $request->category_id,
-            'picture' => $request->$filePath,
+            'picture' => $fileName,
             'organiser_id' => $id,
             'interest_ranking' => $interestRanking,
         ]);
@@ -113,4 +113,10 @@ class EventController extends Controller
         return redirect('/');
 
     }  
+
+    public function getPicture($name)
+    {
+        return Storage::disk('s3')->response('images/'.$name);
+        
+    }
 }
