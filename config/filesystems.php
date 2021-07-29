@@ -44,10 +44,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('eu-west-2'),
-            'bucket' => env('AWS_BUCKET'),
+            'key' => 'AKIAWF4BYWVE33KITZ74',
+            'secret' => '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',
+            'region' => 'eu-west-2',
+            'bucket' => 'aston-events',
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),

@@ -18,9 +18,9 @@ class CreateEventsTable extends Migration
             $table->string('name')->nullable(false);
             $table->string('description')->nullable(false);
             $table->dateTime('date')->nullable(false);
-            $table->foreignId('organiser_id')->constrained('users');
+            $table->unsignedBigInteger('organiser_id')->nullable(false);
             $table->string('location')->nullable(false);
-            $table->foreignId('category_id')->constrained('categories');
+            $table->unsignedBigInteger('category_id')->nullable(false);
             $table->string('picture')->nullable(false);
             $table->integer('interest_ranking')->nullable(false);
             $table->timestamps();
