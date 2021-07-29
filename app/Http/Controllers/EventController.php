@@ -85,9 +85,15 @@ class EventController extends Controller
 
     public function edit(Event $event)
     {
-            return view('event.edit', [
-                'event' => $event,
-            ]);            
+        $id = Auth::id();
+
+        if($id != $event->organiser_id){
+            return redirect('/');
+        }
+        
+        return view('event.edit', [
+            'event' => $event,
+        ]);            
     }
 
     public function update(Request $request, Event $event)
@@ -117,6 +123,5 @@ class EventController extends Controller
     public function getPicture($name)
     {
         return Storage::disk('s3')->response('images/'.$name);
-        
     }
 }

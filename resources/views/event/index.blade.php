@@ -17,6 +17,9 @@
         <th>Description</th>
         <th onclick="sortTable(1)">Date</th>
         <th>Category</th>
+        @if( auth()->check() )
+        <th>Edit</th>
+        @endif
     </tr>
     @foreach($events->sortByDesc('interest_ranking') as $event)
     <tr>
@@ -30,6 +33,10 @@
         @else($event->category_id === 3)
           <td>Other</td>
         @endif
+        @if( auth()->check() )
+        <td><button onclick="window.location='{{ url("editevent/{$event->id}") }}'">Edit Event</button></td>
+        @endif
+
     </tr>
     @endforeach
 </table>
