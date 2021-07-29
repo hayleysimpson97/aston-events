@@ -10,7 +10,6 @@
         <h1>{{$event->name}}</h1>
         <h2>{{$event->date}}</h2>
         <p>{{$event->location}}</p>
-        <p>{{$file}}</p>  
         <p>{{$event->description}}</p>
         <p>Organised by: {{$event->organiser_name}}</p>
         <p>Contact: {{$event->email}}, {{$event->phone_number}}</p>

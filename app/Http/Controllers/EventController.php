@@ -42,12 +42,9 @@ class EventController extends Controller
 
         $similarEvents = Event::where('category_id', $categoryId)->get();
 
-        $file = Storage::disk('s3')->response('images/'.$event->picture);
-
         return view('event.show', [
             'event' => $eventDetail,
             'similarEvents' => $similarEvents,
-            'file' => $file,
         ]);      
     }
 
@@ -117,4 +114,9 @@ class EventController extends Controller
 
     }  
 
+    public function getPicture($name)
+    {
+        return Storage::disk('s3')->response('images/'.$name);
+        
+    }
 }
