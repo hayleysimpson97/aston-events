@@ -24,11 +24,12 @@
                             </div>
                             <div class="detail-input">
                                 <label for="password">Password</label><br>
-                                <input type="password" id="password" name="password" required><br>
+                                <input type="password" id="password" name="password" onkeyup="checkPass();" required><br>
                             </div>
                             <div class="detail-input">
                                 <label for="confirm_password">Confirm Password</label><br>
-                                <input type="password" id="confirm_password" name="confirm_password"  required><br>
+                                <input type="password" id="confirm_password" name="confirm_password"  onkeyup="checkPass();" required><br>
+                                <p id="confirm-message"></p>
                             </div>
                             <div class="detail-input">
                                 <label for="phone_number">Contact Number</label><br>
@@ -46,14 +47,24 @@
 @endsection
 
 <script>
-function matchPassword() {  
-  var pw1 = document.getElementById("password");  
-  var pw2 = document.getElementById("confirm_password");  
-  if(pw1 != pw2)  
-  {   
-    alert("Passwords did not match");  
-  } else {  
-    alert("Password created successfully");  
-  }  
-}  
+function checkPass()
+{
+    var pw1 = document.getElementById('password');
+    var pw2 = document.getElementById('confirm_password');
+
+    var message=document.getElementById('confirm-message');
+
+    var good_color = "#66cc66";
+    var good_color = "#ff6666";
+
+    if(pw1.value == pw2.value){
+        pw2.style.backgroundColor = good_color;
+        message.style.color = good_color;
+        message.innerHTML = "passwords match!";
+    }else {
+        pw2.style.backgroundColor = bad_color;
+        message.style.color = bad_color;
+        message.innerHTML = "passwords do not match!";
+    }
+}
 </script>  
